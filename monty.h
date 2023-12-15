@@ -1,5 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
+
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -7,8 +9,9 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+
 /**
- * struct stack_s - doubly linked list representation of a stack (or queue)
+ * struct stack_s - doubly linked list representation of a stack altor queue
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
@@ -22,8 +25,9 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
 /**
- * struct bus_s - variables -args, file, line content
+ * struct bus_s - variables -args, file, to line up content
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
@@ -41,7 +45,7 @@ extern bus_t bus;
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
- * @f: function to handle the opcode
+ * @f: function to handle the opcode in this
  *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
